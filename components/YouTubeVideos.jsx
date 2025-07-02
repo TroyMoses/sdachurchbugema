@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const YouTubeVideos = () => {
   const [videos, setVideos] = useState([]);
-  const API_KEY = 'AIzaSyB5yyv0L_42R7ZOHmE2IhtnyFTxOmM53_Q'; // 🔁 Replace with your actual YouTube API key
-  const CHANNEL_ID = 'UCoTQ-9-dDGk_OriZMLdnDbA'; // 🔁 Replace with your actual channel ID
+  const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  const CHANNEL_ID = "UCoTQ-9-dDGk_OriZMLdnDbA";
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -12,9 +12,16 @@ const YouTubeVideos = () => {
           `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=6`
         );
         const data = await res.json();
-        setVideos(data.items);
+
+        // Filter out invalid results (e.g., playlists or channels)
+        const validVideos = data.items?.filter(
+          (item) => item.id?.videoId && item.snippet
+        );
+
+        setVideos(validVideos || []);
       } catch (error) {
-        console.error('Failed to fetch YouTube videos:', error);
+        console.error("Failed to fetch YouTube videos:", error);
+        setVideos([]); // fallback
       }
     };
 
@@ -22,12 +29,12 @@ const YouTubeVideos = () => {
   }, []);
 
   return (
-    <div className=" grid md:grid-cols-3 gap-5 color ">
+    <div className="grid md:grid-cols-3 gap-2">
       {videos.map((video) => (
         <div key={video.id.videoId} className="video-card">
           <iframe
             width="100%"
-            height="215"
+            height="251"
             src={`https://www.youtube.com/embed/${video.id.videoId}`}
             title={video.snippet.title}
             frameBorder="0"

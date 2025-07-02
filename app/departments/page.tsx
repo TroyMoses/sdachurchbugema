@@ -1,264 +1,109 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { MainNav } from "@/components/main-nav";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-import { ArrowLeft, Calendar, MapPin } from "lucide-react";
-import Link from "next/link";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-interface EventDetailProps {
-  params: { slug: string };
-}
-
-// This would typically come from an API or database
-const getEventData = (slug: string) => {
-  // Mock data - replace with actual data fetching
-  return {
-    title: slug.split("-").join(" "),
-    date: "March 15, 2025",
-    time: "10:00 AM - 2:00 PM",
-    location: "Bugema University SDA Church",
-    category: "HEALTHCARE",
-    image: "/_MG_7809.JPG",
-    content: `
-      <p>Join us for this special event where we will be providing free medical and dental care to our community. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <h2>Event Details</h2>
-      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <h2>What to Bring</h2>
-      <ul>
-        <li>Valid ID</li>
-        <li>Medical history records (if available)</li>
-        <li>Current medication list</li>
-      </ul>
-    `,
-  };
-};
-
-export default function EventDetail({ params }: EventDetailProps) {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
-
-  const event = getEventData(params.slug);
-=======
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 type Leader = {
   name: string;
-  role: string;
-  imgSrc: string;
+  title: string;
+  tab: string;
+  img?: string;
 };
 
-const leaders: Leader[] = [
-  { name: "PASTOR CALEB MBABALI", role: "Chaplain", imgSrc: "/MALE.jpg" },
-  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE.jpg" },
-  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE" },
-  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE" },
-  // ...add more as needed
+const allLeaders: Leader[] = [
+  { name: "PASTOR CALEB MBABALI", title: "Chaplain", tab: "Executive" },
+  {
+    name: "Marius Tirca",
+    title: "Co-Founder & Chief Technology Officer",
+    tab: "Executive",
+  },
+  { name: "Ashim Gupta", title: "Chief Financial Officer", tab: "Executive" },
+  { name: "Bobby Patrick", title: "Chief Marketing Officer", tab: "Executive" },
+
+  { name: "Jane Doe", title: "Global Strategy Lead", tab: "Global" },
+  { name: "John Global", title: "Director of Global Outreach", tab: "Global" },
+
+  {
+    name: "Carlos Ramirez",
+    title: "Regional Director - Americas",
+    tab: "Americas",
+  },
+  {
+    name: "Maria Lopez",
+    title: "Program Coordinator - Americas",
+    tab: "Americas",
+  },
+
+  { name: "Kofi Mensah", title: "Regional Pastor - EMEA", tab: "EMEA" },
+  { name: "Fatima Zahra", title: "Youth Director - EMEA", tab: "EMEA" },
+
+  { name: "Kenji Tanaka", title: "APAC Ministry Lead", tab: "APAC" },
+  { name: "Siti Nur", title: "Community Organizer - APAC", tab: "APAC" },
 ];
 
+const tabs = ["Executive", "Global", "Americas", "EMEA", "APAC"];
+
 export default function DepartmentsPage() {
+  const [activeTab, setActiveTab] = useState("Executive");
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
->>>>>>> Stashed changes
-=======
-import AOS from "aos";
-import "aos/dist/aos.css";
 
-type Leader = {
-  name: string;
-  role: string;
-  imgSrc: string;
-};
-
-const leaders: Leader[] = [
-  { name: "PASTOR CALEB MBABALI", role: "Chaplain", imgSrc: "/MALE.jpg" },
-  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE.jpg" },
-  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE" },
-  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE" },
-  // ...add more as needed
-];
-
-export default function DepartmentsPage() {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
->>>>>>> Stashed changes
-=======
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-type Leader = {
-  name: string;
-  role: string;
-  imgSrc: string;
-};
-
-const leaders: Leader[] = [
-  { name: "PASTOR CALEB MBABALI", role: "Chaplain", imgSrc: "/MALE.jpg" },
-  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE.jpg" },
-  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE" },
-  { name: "Jane Smith", role: "Elders Lead", imgSrc: "/FEMALE" },
-  // ...add more as needed
-];
-
-export default function DepartmentsPage() {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
->>>>>>> Stashed changes
+  const filteredLeaders = allLeaders.filter(
+    (leader) => leader.tab === activeTab
+  );
 
   return (
     <main className="min-h-screen overflow-hidden pr-16">
       <MainNav />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+      <div className="text-center my-10 pt-24">
+        <h2 className="text-6xl font-bold text-cyan-900">CHURCH LEADERSHIP </h2>
 
-      <article className="pt-32 pb-16">
-        <div className="container mx-auto px-4">
-          <Link
-            href="/news"
-            className="inline-flex items-center text-gray-600 hover:text-primary mb-8"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Events
-          </Link>
+        {/* Tabs */}
+        <div className="flex justify-center space-x-8 mt-6 border-b  bg-cyan-900">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`pb-2 text-sm font-medium transition duration-200 ${
+                tab === activeTab
+                  ? "border-b-2 border-white-500 text-white"
+                  : "text-gray-500 hover:text-black"
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-sm text-gray-500">{event.date}</span>
-              <span className="text-sm text-[#2F557F]">{event.category}</span>
-            </div>
-
-            <h1 className="text-4xl font-bold mb-8" data-aos="fade-up">
-              {event.title}
-            </h1>
-
-            <div className="relative h-[400px] w-full mb-8" data-aos="fade-up">
-              <Image
-                src={event.image || "/placeholder.svg"}
-                alt={event.title}
-                fill
-                className="object-cover rounded-lg"
-              />
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg mb-8" data-aos="fade-up">
-              <div className="flex items-start gap-6">
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-5 w-5 text-[#2F557F]" />
-                  <div>
-                    <p className="font-medium">{event.date}</p>
-                    <p className="text-sm text-gray-600">{event.time}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-[#2F557F]" />
-                  <p className="font-medium">{event.location}</p>
-                </div>
+        {/* Leadership Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10 mr-12 ml-12">
+          {filteredLeaders.map((leader, index) => (
+            <div key={index} className="text-left" data-aos="fade-up">
+              <div className="w-full h-64 bg-gray-300 rounded-lg flex items-center justify-center text-gray-400 text-lg">
+                {/* Placeholder or future image */}
+                {leader.img ? (
+                  <Image
+                    src={leader.img}
+                    alt={leader.name}
+                    width={50}
+                    height={100}
+                    className="rounded-lg object-cover"
+                  />
+                ) : (
+                  "No Image"
+                )}
               </div>
+              <h3 className="mt-4 text-lg font-semibold">{leader.name}</h3>
+              <p className="text-sm text-gray-600">{leader.title}</p>
             </div>
-
-            <div
-              className="prose prose-lg max-w-none"
-              dangerouslySetInnerHTML={{ __html: event.content }}
-              data-aos="fade-up"
-            />
-          </div>
-        </div>
-      </article>
-=======
-      <div className="container mx-auto px-4 mt-20">
-        <h2 className="text-xl font-bold text-center mb-8 ">
-          CHURCH LEADERSHIP
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {leaders.map((leader) => (
-            <div
-              key={leader.name}
-              className="flex flex-col items-center text-center"
-              data-aos="fade-up"
-            >
-              <Image
-                src={leader.imgSrc}
-                alt={leader.name}
-                width={150}
-                height={150}
-                className="rounded-full object-cover mb-4"
-              />
-              <h3 className="text-xl font-semibold">{leader.name}</h3>
-              <p className="text-gray-600">{leader.role}</p>
-            </div>
-            
           ))}
         </div>
       </div>
->>>>>>> Stashed changes
-=======
-      <div className="container mx-auto px-4 mt-20">
-        <h2 className="text-xl font-bold text-center mb-8 ">
-          CHURCH LEADERSHIP
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {leaders.map((leader) => (
-            <div
-              key={leader.name}
-              className="flex flex-col items-center text-center"
-              data-aos="fade-up"
-            >
-              <Image
-                src={leader.imgSrc}
-                alt={leader.name}
-                width={150}
-                height={150}
-                className="rounded-full object-cover mb-4"
-              />
-              <h3 className="text-xl font-semibold">{leader.name}</h3>
-              <p className="text-gray-600">{leader.role}</p>
-            </div>
-            
-          ))}
-        </div>
-      </div>
->>>>>>> Stashed changes
-=======
-      <div className="container mx-auto px-4 mt-20">
-        <h2 className="text-xl font-bold text-center mb-8 ">
-          CHURCH LEADERSHIP
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {leaders.map((leader) => (
-            <div
-              key={leader.name}
-              className="flex flex-col items-center text-center"
-              data-aos="fade-up"
-            >
-              <Image
-                src={leader.imgSrc}
-                alt={leader.name}
-                width={150}
-                height={150}
-                className="rounded-full object-cover mb-4"
-              />
-              <h3 className="text-xl font-semibold">{leader.name}</h3>
-              <p className="text-gray-600">{leader.role}</p>
-            </div>
-            
-          ))}
-        </div>
-      </div>
->>>>>>> Stashed changes
     </main>
   );
 }

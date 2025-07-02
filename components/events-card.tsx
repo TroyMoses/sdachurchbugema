@@ -22,11 +22,14 @@ export function EventsCard({ title, image, date, category, description }: Events
             <span className="text-sm text-gray-500">{date}</span>
             <span className="text-sm text-[#2F557F]">{category}</span>
           </div>
-          <Link href={`/events/${title}`} className="font-bold hover:text-[#2F557F] transition-colors">{title}</Link>
+          {/* ✅ FIXED: Not a <Link> anymore */}
+          <p className="font-bold hover:text-[#2F557F] transition-colors">{title}</p>
           {description && <p className="text-gray-600 text-sm mt-2">{description}</p>}
         </CardContent>
       </Link>
     </Card>
-  )
+  );
 }
+
+
 
