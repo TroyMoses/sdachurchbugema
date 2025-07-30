@@ -550,7 +550,7 @@ const tabs = [
   "PUBLISHING MINISTRY",
 ];
 
-export default function departmentsPage() {
+export default function DepartmentsPage() {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   useEffect(() => {
