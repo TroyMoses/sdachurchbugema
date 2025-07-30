@@ -64,14 +64,16 @@ export function MainNav() {
                 News
               </Button>
             </Link>
-            <a href="https://www.adventist.org/beliefs/" 
-                target="_blank" 
-               rel="noopener noreferrer">
-               <Button variant="ghost" className="text-[#2F557F] text-base">
+            <a
+              href="https://www.adventist.org/beliefs/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="ghost" className="text-[#2F557F] text-base">
                 Our Beliefs
-                  </Button>
-              </a>
-             <Link href="/Sermons">
+              </Button>
+            </a>
+            <Link href="/Sermons">
               <Button variant="ghost" className="text-[#2F557F] text-base">
                 Sermons
               </Button>
@@ -85,16 +87,24 @@ export function MainNav() {
 
           {/* Desktop Right Side */}
           <div className="hidden lg:flex items-center space-x-6">
-          <Link href="https://www.youtube.com/@SDACHURCHBUGEMAUNIVERSITY" className="text-[#2F557F] hover:text-primary">
+            <Link
+              href="https://www.youtube.com/@SDACHURCHBUGEMAUNIVERSITY"
+              className="text-[#2F557F] hover:text-primary"
+            >
               <FaYoutube className="h-5 w-5" />
             </Link>
-            <Link href="https://www.facebook.com/bugemauniversitymainSDAchurch" className="text-[#2F557F] hover:text-primary">
+            <Link
+              href="https://www.facebook.com/bugemauniversitymainSDAchurch"
+              className="text-[#2F557F] hover:text-primary"
+            >
               <Facebook className="h-5 w-5" />
             </Link>
-            <Link href="https://www.tiktok.com/@sda.church.bugema?_t=ZM-8v8ilSFxNQ6&_r=1" className="text-[#2F557F] hover:text-primary">
+            <Link
+              href="https://www.tiktok.com/@sda.church.bugema?_t=ZM-8v8ilSFxNQ6&_r=1"
+              className="text-[#2F557F] hover:text-primary"
+            >
               <PiTiktokLogoBold className="h-5 w-5" />
             </Link>
-          
           </div>
 
           {/* Mobile Menu Button */}
@@ -128,24 +138,24 @@ export function MainNav() {
               <Link
                 href="/news"
                 className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
-
                 onClick={() => setIsOpen(false)}
               >
                 News
               </Link>
-              <a href="https://www.adventist.org/beliefs/" 
-                target="_blank" 
-               rel="noopener noreferrer">
-               <Button variant="ghost" className="text-[#2F557F] text-base">
-                Our Beliefs
-                  </Button>
+              <a
+                href="https://www.adventist.org/beliefs/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="ghost" className="text-[#2F557F] text-base">
+                  Our Beliefs
+                </Button>
               </a>
               <Link href="/Sermons">
-              <Button variant="ghost" className="text-[#2F557F] text-base">
-                Sermons
-              </Button>
-
-            </Link>
+                <Button variant="ghost" className="text-[#2F557F] text-base">
+                  Sermons
+                </Button>
+              </Link>
               <Link
                 href="/departments"
                 className="text-[#2F557F] px-4 py-2 rounded-md hover:bg-gray-100"
