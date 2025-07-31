@@ -76,10 +76,10 @@ const allLeaders: Leader[] = [
     img: "",
   },
   {
-    name: "Eld.Mukama Benson",
+    name: "Eld.Mkama Benson",
     title: "Elder",
     tab: "ELDERS",
-    img: "",
+    img: "/Mkama.jpg",
   },
   {
     name: "Eld.John Baleeta",
@@ -115,7 +115,7 @@ const allLeaders: Leader[] = [
     name: "Eld.Desengimana Stephen",
     title: "Elder",
     tab: "ELDERS",
-    img: "",
+    img: "/Dusengimana.jpg",
   },
   {
     name: "Eld.Amoah John",
@@ -215,7 +215,7 @@ const allLeaders: Leader[] = [
   { name: "Bro.Lamech Geoffrey", title: "Deacon", tab: "DEACONARY" },
   { name: "Ssendiga Geoffrey", title: "Deacon", tab: "DEACONARY" },
   { name: "Kikubira Micheal", title: "Deacon", tab: "DEACONARY" },
-  { name: "Okawo Kaleb", title: "Deacon", tab: "DEACONARY" },
+  { name: "Okao Kaleb Joshua", title: "Deacon", tab: "DEACONARY", img:"/OKAO KALEB JOSHUA .jpg" },
   { name: "Bulime Richard", title: "Deacon", tab: "DEACONARY" },
   { name: "Moses Mugisha", title: "Deacon", tab: "DEACONARY" },
   { name: "Mr Lumu Marvin", title: "Deacon", tab: "DEACONARY" },
@@ -242,32 +242,52 @@ const allLeaders: Leader[] = [
   { name: "Nambaziira Latifah", title: "Deacon", tab: "DEACONARY" },
   { name: "Babirye Diana", title: "Deacon", tab: "DEACONARY" },
 
-
   /* clerks */
-  { name: "Mr. Hafashimana Samuel", title: "Head Clerk", tab: "CLERKS",img: "/HAFASHIMANA SAMUEL-HOD EDUC ARTS.jpg" },
+  {
+    name: "Mr. Hafashimana Samuel",
+    title: "Head Clerk",
+    tab: "CLERKS",
+    img: "/HAFASHIMANA SAMUEL-HOD EDUC ARTS.jpg",
+  },
   {
     name: "Eld. Moses Muhumuza",
     title: "Incharge of MemberShip",
     tab: "CLERKS",
-    img: "/MUHUMUZA MOSES-EDUC.jpg"
+    img: "/MUHUMUZA MOSES-EDUC.jpg",
   },
-  { name: "Mrs. Betty Tenywa", title: "Incharge of Records", tab: "CLERKS",img: "" },
+  {
+    name: "Mrs. Betty Tenywa",
+    title: "Incharge of Records",
+    tab: "CLERKS",
+    img: "",
+  },
 
   /* treasury */
-  { name: "Mr.Atuha Sanctus", title: "Treasurer", tab: "TREASURY",img: "/CPA. SANCTUS ATUHA-SCH BUSINESS.jpg" },
-  { name: "Mr.steven Dusengimana", title: "Treasurer", tab: "TREASURY" ,img: ""},
+  {
+    name: "Mr.Atuha Sanctus",
+    title: "Treasurer",
+    tab: "TREASURY",
+    img: "/CPA. SANCTUS ATUHA-SCH BUSINESS.jpg",
+  },
+  {
+    name: "Mr.steven Dusengimana",
+    title: "Treasurer",
+    tab: "TREASURY",
+    img: "/Dusengimana.jpg",
+  },
 
   /* interest cordinator */
   {
     name: "Mr.Keith Tibenda",
     title: "Interest Cordinator",
-    tab: "INTEREST CORDINATOR",img: "/KEITH TIBENDA-SOCIAL SCIENCES.jpg"
+    tab: "INTEREST CORDINATOR",
+    img: "/KEITH TIBENDA-SOCIAL SCIENCES.jpg",
   },
   {
     name: "Mrs.Edith Migadde",
     title: "Interest Cordinator",
     tab: "INTEREST CORDINATOR",
-    img: ""
+    img: "",
   },
 
   /* sabbath school */
@@ -275,13 +295,13 @@ const allLeaders: Leader[] = [
     name: "Mrs.Nassanga Deborah",
     title: "Sabbath School Superintendent ",
     tab: "SABBATH SCHOOL",
-    img: ""
+    img: "",
   },
   {
     name: "Pr.Mayambala Stanley",
     title: "Asst Sabbath School Superintendent ",
     tab: "SABBATH SCHOOL",
-    img: ""
+    img: "",
   },
 
   /* personal ministries */
@@ -289,13 +309,13 @@ const allLeaders: Leader[] = [
     name: "Pr.Nsangabaganwa Theogene",
     title: "Head Personal Ministry ",
     tab: "PERSONAL MINISTRY",
-    img: ""
+    img: "",
   },
   {
     name: "Mr.George Mushana",
     title: "Asst Personal Ministry ",
     tab: "PERSONAL MINISTRY",
-    img: ""
+    img: "",
   },
 
   /* adventist men */
@@ -303,13 +323,13 @@ const allLeaders: Leader[] = [
     name: "Mr.Kanyerezi Richard",
     title: "Head Adventist Men",
     tab: "ADVENTIST MEN",
-    img: ""
+    img: "",
   },
   {
     name: "Mr.Kagame Douglas",
     title: "Asst Adventist Men",
     tab: "ADVENTIST MEN",
-    img: ""
+    img: "",
   },
 
   /* YOUTH MINISTRIES */
@@ -317,31 +337,31 @@ const allLeaders: Leader[] = [
     name: "Mr.Nsengiyunva Meshack",
     title: "Young Adults Leader",
     tab: "YOUTH MINISTRY",
-    img: ""
+    img: "",
   },
   {
     name: "Eld.Niyomugabo Francis",
     title: "PCM Leader ",
     tab: "YOUTH MINISTRY",
-    img: ""
+    img: "",
   },
   {
     name: "Mr.Barraka Tungaraza",
     title: "Ambassador-Director",
     tab: "YOUTH MINISTRY",
-    img: ""
+    img: "",
   },
   {
     name: "Mrs.Stella Adong",
     title: "Pathfinder-Director ",
     tab: "YOUTH MINISTRY",
-    img: ""
+    img: "",
   },
   {
     name: "Mr.Samuel Wakwatekwa",
     title: "Adventurer-Director",
     tab: "YOUTH MINISTRY",
-    img: ""
+    img: "",
   },
 
   /* children */
@@ -350,81 +370,116 @@ const allLeaders: Leader[] = [
     name: "Mrs.Doreen Kaweesi",
     title: "Asst Director ",
     tab: "CHILDREN MINISTRY",
-    img: ""
+    img: "",
   },
   {
     name: "Mrs Charity Hafashimana",
     title: "Kindergarten",
     tab: "CHILDREN MINISTRY",
-    img: ""
+    img: "",
   },
   {
     name: "Nyiraneza Wilmer",
     title: "Primary",
     tab: "CHILDREN MINISTRY",
-    img: ""
+    img: "",
   },
   {
     name: "Mrs Juliet",
     title: "PowerPoint",
     tab: "CHILDREN MINISTRY",
-    img: ""
+    img: "",
   },
   {
     name: "Tr. Salim",
     title: "Real Time",
     tab: "CHILDREN MINISTRY",
-    img: ""
+    img: "",
   },
   {
     name: "Nathan Bazungu",
     title: "Cornerstone",
     tab: "CHILDREN MINISTRY",
-    img: ""
+    img: "",
   },
 
   /* women */
-  { name: "Mrs. Valleria Nsaszabaganwa", title: "Director", tab: "WOMEN MINISTRY",img: "" },
+  {
+    name: "Mrs. Valleria Nsaszabaganwa",
+    title: "Director",
+    tab: "WOMEN MINISTRY",
+    img: "",
+  },
   {
     name: "Gertude Mukyala",
     title: "Asst Director ",
     tab: "WOMEN MINISTRY",
-    img: ""
+    img: "",
   },
 
   /* COMMUNICATION */
-  { name: "Mr.Seth Tibenda", title: "Director", tab: "COMMUNICATION",img: "/TIBENDA SEITH -IT.jpg" },
+  {
+    name: "Mr.Seth Tibenda",
+    title: "Director",
+    tab: "COMMUNICATION",
+    img: "/TIBENDA SEITH -IT.jpg",
+  },
 
   /* education */
-  { name: "Mrs.Marget Baleeta", title: "", tab: "EDUCATION",img: "" },
-  { name: "Eld.Okoth Ronald", title: "", tab: "EDUCATION",img: "/RONALD OTIENO OKOTH-QUALITY ASSURANCE_.jpg" },
+  { name: "Mrs.Marget Baleeta", title: "", tab: "EDUCATION", img: "" },
+  {
+    name: "Eld.Okoth Ronald",
+    title: "",
+    tab: "EDUCATION",
+    img: "/RONALD OTIENO OKOTH-QUALITY ASSURANCE_.jpg",
+  },
 
   /* FAMILY LIFE */
-  { name: "Eld.Amoah John", title: "Director", tab: "FAMILY LIFE",img: ""},
+  { name: "Eld.Amoah John", title: "Director", tab: "FAMILY LIFE", img: "" },
 
   /* HEALTH */
-  { name: "Ms.Cate Kafeero", title: "Director", tab: "HEALTH MINISTRY",img: "" },
+  {
+    name: "Ms.Cate Kafeero",
+    title: "Director",
+    tab: "HEALTH MINISTRY",
+    img: "",
+  },
   {
     name: "Mrs.Joan Kabuye",
     title: "Asst Director ",
     tab: "HEALTH MINISTRY",
-    img: ""
+    img: "",
   },
 
   /* MUSIC */
-  { name: "Eld.Kirabo Jacob", title: "", tab: "MUSIC",img: "/KIRABO JACOB .E.-QUALITY ASSURANCE.jpg" },
-  { name: "Mrs.Busuulwa Eline", title: "", tab: "MUSIC",img: "" },
+  {
+    name: "Eld.Kirabo Jacob",
+    title: "",
+    tab: "MUSIC",
+    img: "/KIRABO JACOB .E.-QUALITY ASSURANCE.jpg",
+  },
+  { name: "Mrs.Busuulwa Eline", title: "", tab: "MUSIC", img: "" },
 
   /* CHURCH CHOIR*/
-  { name: "Mrs.Musisi", title: "", tab: "CHURCH CHOIR",img: "/RUTH KUTEESA MUSISI-ADMIN ASS.jpg" },
+  {
+    name: "Mrs.Musisi",
+    title: "",
+    tab: "CHURCH CHOIR",
+    img: "/RUTH KUTEESA MUSISI-ADMIN ASS.jpg",
+  },
 
   /* PRISON MINISTRY */
-  { name: "Eld.Katamba Enock", title: "", tab: "PRISON MINISTRY",img: "/KATAMBA ENOCK-SOCIAL WORK (1).jpg" },
+  {
+    name: "Eld.Katamba Enock",
+    title: "",
+    tab: "PRISON MINISTRY",
+    img: "/KATAMBA ENOCK-SOCIAL WORK (1).jpg",
+  },
   {
     name: "Ms.Collins Basemera",
     title: "Asst Director ",
     tab: "PRISON MINISTRY",
-    img: ""
+    img: "",
   },
 
   /* PUBLIC AFFAIRS AND RELIGIOUS LIBERTY */
@@ -432,77 +487,82 @@ const allLeaders: Leader[] = [
     name: "Pr.Aliddeki Christain",
     title: "",
     tab: "PUBLIC AFFAIRS AND RELIGIOUS LIBERTY",
-    img: ""
+    img: "",
   },
   {
     name: "Pr.Achiga Anthony",
     title: "",
     tab: "PUBLIC AFFAIRS AND RELIGIOUS LIBERTY",
-    img: ""
+    img: "",
   },
 
   /* SOCIAL AND WELFARE */
-  { name: "Ms.Sarah Lwokyaza", title: "", tab: "SOCIAL AND WELFARE",img: "" },
+  { name: "Ms.Sarah Lwokyaza", title: "", tab: "SOCIAL AND WELFARE", img: "" },
   {
     name: "Mrs.Harriet Katamba",
     title: "",
     tab: "SOCIAL AND WELFARE",
-    img: ""
+    img: "",
   },
 
   /* CUSTODIAN */
   { name: "Mr.Lumu Marvin", title: "", tab: "CUSTODIAN" },
-  { name: "Mr.Birumi Timothy", title: "", tab: "CUSTODIAN",img: ""},
+  { name: "Mr.Birumi Timothy", title: "", tab: "CUSTODIAN", img: "" },
 
   /* STERWARDSHIP AND DEVELOPMENT */
   {
     name: "Mrs.Tibenda Vicky",
     title: "",
     tab: "STERWARDSHIP AND DEVELOPMENT",
-    img: ""
+    img: "",
   },
   {
     name: "Mrs.Grace Birungi",
     title: "",
     tab: "STERWARDSHIP AND DEVELOPMENT",
-    img: ""
+    img: "",
   },
 
   /* SHEPHERDESS */
-  { name: "Mrs.Ellen Kyoma", title: "", tab: "SHEPHERDESS",img: "" },
+  { name: "Mrs.Ellen Kyoma", title: "", tab: "SHEPHERDESS", img: "" },
 
   /* POSSIBILITY MINISTRY */
   {
     name: "Eld.Moses Muhumuza",
     title: "",
     tab: "POSSIBILITY MINISTRY",
-    img: "/MUHUMUZA MOSES-EDUC.jpg"
+    img: "/MUHUMUZA MOSES-EDUC.jpg",
   },
   {
     name: "Mugge Lillian Florence",
     title: " ",
     tab: "POSSIBILITY MINISTRY",
-    img: ""
+    img: "",
   },
 
   /* PIANISTS */
-  { name: "Hafasha Arthur", title: "", tab: "PIANISTS",img: "" },
-  { name: "Wasswa Edson", title: "", tab: "PIANISTS",img: "" },
-  { name: "Kato Elvis", title: "", tab: "PIANISTS",img: "" },
+  { name: "Hafasha Arthur", title: "", tab: "PIANISTS", img: "" },
+  { name: "Wasswa Edson", title: "", tab: "PIANISTS", img: "" },
+  { name: "Kato Elvis", title: "", tab: "PIANISTS", img: "" },
 
   /* COMPANY LEADERS */
-  { name: "Eld.Dan Magalu", title: "Kampala Campus", tab: "COMPANY LEADERS",img: "/MUGALU DANIEL-SCH BUSINESS.jpg" },
+  {
+    name: "Eld.Dan Magalu",
+    title: "Kampala Campus",
+    tab: "COMPANY LEADERS",
+    img: "/MUGALU DANIEL-SCH BUSINESS.jpg",
+  },
   {
     name: "Akok Akok Ngor",
     title: "Forest View",
     tab: "COMPANY LEADERS",
-    img: ""
+    img: "",
   },
   {
     name: "Sabbato Mbanza",
     title: "Seattle",
     tab: "COMPANY LEADERS",
-    img: ""
+    img: "",
   },
 
   /* PUBLISHING MINISTRY */
@@ -510,13 +570,13 @@ const allLeaders: Leader[] = [
     name: "Niyobitegeka Joshua",
     title: "",
     tab: "PUBLISHING MINISTRY",
-    img: ""
+    img: "",
   },
   {
     name: "Eld.Paul Mukasa",
     title: "",
     tab: "PUBLISHING MINISTRY",
-    img: ""
+    img: "",
   },
 ];
 
@@ -574,8 +634,12 @@ export default function DepartmentsPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <h2 className="text-4xl md:text-2xl font-bold text-white-900 mb-0">PASTOR CALEB MBABALI</h2>
-          <h2 className="text-4xl md:text-2xl font-bold text-white-900 mb-6">CHAPLIAN</h2>
+          <h2 className="text-4xl md:text-2xl font-bold text-white-900 mb-0">
+            PASTOR CALEB MBABALI
+          </h2>
+          <h2 className="text-4xl md:text-2xl font-bold text-white-900 mb-6">
+            CHAPLAIN
+          </h2>
         </div>
         <h2 className="text-4xl md:text-6xl font-bold text-cyan-900 mb-6">
           CHURCH LEADERSHIP
